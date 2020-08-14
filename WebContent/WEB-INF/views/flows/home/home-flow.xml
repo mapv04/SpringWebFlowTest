@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+                          http://www.springframework.org/schema/webflow/spring-webflow.xsd">
+
+	<!-- is the start state -->
+	<view-state id="home" view="flows/home/home">
+		<transition on="next" to="transition1"></transition>
+	</view-state>
+
+	<view-state id="transition1" view="transition1">
+		<transition on="previous" to="home"></transition>
+		<transition on="next" to="transition2"></transition>
+	</view-state>
+
+	<view-state id="transition2" view="transition2">
+		<transition on="previous" to="transition1"></transition>
+	</view-state>
+
+	<end-state id="end" view="end"></end-state>
+
+</flow>
