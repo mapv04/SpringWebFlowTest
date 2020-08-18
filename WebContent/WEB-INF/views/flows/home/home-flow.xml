@@ -18,6 +18,7 @@
 
 	<view-state id="transition2">
 		<transition on="previous" to="transition1"></transition>
+		<transition on="next" to="end" ></transition>
 	</view-state>
 
 	<end-state id="end" view="end"></end-state>
